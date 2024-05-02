@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Convertor</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        #cont {
+            margin-top: 50px;
+            background-color: black;
+            color: white;
+            padding: 30px 50px 90px 40px;
+            border-radius: 30px;
+
+        }
+
+        h1 {
+            margin-bottom: 5px;
+            padding-bottom: 40px;
+            text-align: center;
+        }
+
+        #currName,
+        #currRate {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+
+        }
+
+        .currency {
+            background-color: orange;
+        }
+
+        input {
+            background-color: rgb(209, 209, 209);
+        }
+
+        .submit {
+            display: flex;
+            justify-content: center;
+        }
+
+        button {
+            background-color: rgb(255, 209, 150);
+        }
+
+        @media screen and (max-width: 600px) {
+            #cont {
+                margin-top: 50px;
+                background-color: black;
+                color: rgb(212, 0, 0);
+                border-radius: 30px;
+
+            }
+
+            #currRate {
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: center;
+                gap: 1px;
+                margin: 10px;
+            }
+
+            input {
+                width: 70px;
+            }
+        }
+    </style>
+</head>
+
+<body style="background-color: antiquewhite;">
+
+    <div id="cont">
+        <h1>Currency Convertor</h1>
+
+        <div id="currName">
+
+            <select value="" class="currency">
+
+            </select>
+
+            <select value="" class="currency">
+
+            </select>
+        </div>
+
+        <div id="currRate">
+            <input id="inp" type="number">
+            <input id="out" type="number">
+        </div>
+        <div class="submit">
+            <button type="submit" onclick="">Convert</button>
+        </div>
+
+    </div>
+
+    <script>
+
+        let select = document.querySelectorAll('.currency')
+        console.log(select)
+        fetch('https://api.frankfurter.app/currencies')
+            .then(res => res.json())
+
+            .then(res => displayDropDowm(res))
+
+        function displayDropDowm(x) {
+            // console.log(Object.entries(x))
+
+            // console.log(Object.entries(x)[0])
+
+            // console.log(Object.entries(x)[0][0])
+
+            let curr = Object.entries(x)
+
+            for (let val of curr) {
+                let arr = val[0]
+
+                let opt = ` <option value="${arr}">${arr}</option>`
+                select[0].innerHTML += opt
+                select[1].innerHTML += opt
+            }
+
+            // for(let i=0;i<curr.length;i++)
+            // {
+            //     let opt = ` <option value="${curr[i][0]}">${curr[i][0]}</option>`
+            //      select[0].innerHTML = opt
+            //      select[1].innerHTML = opt
+            // }
+        }
+
+        //input box
+        let input = document.getElementById('inp')
+
+        //getting button
+
+        let btn = document.querySelector('button')
+        btn.addEventListener('click',
+            function () {
+                //select[0] la than moth
+                let currF = select[0].value
+                let currT = select[1].value
+
+                let inputVal = input.value
+
+                if (currF === currT) {
+                    alert("Choose different currencies")
+                }
+                else {
+                    convert(currF, currT, inputVal)
+                }
+
+            })
+
+        function convert(x, y, z) {
+            const host = 'api.frankfurter.app';
+            fetch(`https://${host}/latest?amount=${z}&from=${x}&to=${y}`)
+                .then(resp => resp.json())
+                .then((data) => {
+                    document.getElementById('out').value = Object.values(data.rates)[0]
+                });
+
+        }
+    </script>
+</body>
+
+</html>

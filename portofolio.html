@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TopG DK Portofolio</title>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 63px;
+    }
+
+    .Start {}
+
+    #Skills .skill1:hover,
+    .skill2:hover,
+    .skill3:hover,
+    .skill4:hover,
+    .skill5:hover {
+      transform: scaleX(1.5);
+      padding: 50px 5px;
+      transition: transform 0.3s ease-in, padding 0.3s ease-in;
+    }
+
+    #Skills .skill1,
+    .skill2,
+    .skill3,
+    .skill4,
+    .skill5 {
+      transform: scaleX();
+      padding: 0;
+      transition: transform 0.3s ease-out, padding 0.3s ease-out;
+    }
+
+    a {
+      color: black;
+      -webkit-text-stroke: 0.3px #ffffff;
+
+    }
+
+    a:hover {
+      color: white;
+    }
+    ::-webkit-scrollbar{
+      width: ;
+    }
+
+  
+    #Start{
+      background-image: url("https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 870w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 1170w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 1470w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 1740w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 1770w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2070w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2340w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2370w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2670w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2940w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2970w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 3270w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 3540w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 3570w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 3870w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=4140&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 4140w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=4170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 4170w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=4470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 4470w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=4740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 4740w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=4770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 4770w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=5070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 5070w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=5340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 5340w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=5370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 5370w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=5670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 5670w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=5848&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 5848w");
+      background-size: cover;
+      background-blend-mode: overlay;
+
+    }
+    #Aboutme{
+      background-size: cover;
+      background-blend-mode: overlay;
+      -webkit-text-stroke: 0.3px #000000;
+      background-image: url("https://images.unsplash.com/photo-1475070929565-c985b496cb9f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    }
+    #Skills{
+      background-size: ;
+      background-blend-mode: overlay;
+      
+      background-image: url("https://images.unsplash.com/photo-1431440869543-efaf3388c585?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    }
+    #Contact{
+      background-image: url("https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 870w, https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 1170w, https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 1470w, https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 1740w, https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 1770w, https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2070w, https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2340w, https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2370w, https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2670w, https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2940w, https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2970w, https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 3270w, https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 3540w, https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 3570w, https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 3870w, https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=4140&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 4140w, https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=4170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 4170w, https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=4470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 4470w, https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=4740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 4740w, https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=4770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 4770w, https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=5000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 5000w");
+      background-size: cover;
+      background-blend-mode: overlay;
+    }
+    #Work{
+      background-image: url("https://images.unsplash.com/photo-1572177812156-58036aae439c?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+      background-size:cover;
+      background-blend-mode: overlay;
+    }
+
+    @media (max-width: 575px) {
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 100px;
+      }
+
+      .h3 {
+        font-size: 1.1rem;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+
+      .h4 {
+        font-size: 1.3rem;
+      }
+
+      b {
+        font-size: 1.1rem;
+      }
+    }
+
+    @media (min-width: 575px) {
+      .h3 {
+        font-size: 1.5rem;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+
+      .h4 {
+        font-size: 1.3rem;
+      }
+
+      b {
+        font-size: 1.3rem;
+      }
+    }
+
+    @media (min-width: 1050px) {
+      .h3 {
+        font-size: 1.7rem;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        line-height: 160%;
+
+      }
+
+      .h4 {
+        font-size: 1.5rem;
+      }
+
+      b {
+        font-size: 1.5rem;
+      
+      }
+    }
+  </style>
+
+</head>
+
+
+<body class=""id="body">
+  <div class=" fw-bold text-center text-white bg-dark h3 py-2" style="">Websites that convert, experiences that delight. </div>
+  <header class="sticky-top">
+    <nav class=" sticky-top">
+      <div id="navbar" class="navbar border-bottom border-secondary rounded-bottom-5 navbar-expand-md"
+        style="background-color: rgba(0, 0, 0, 0.3); backdrop-filter: blur(10px);">
+        <div class="ms-md-5 ms-3 h4  navbar-brand text-white fw-bold" style="">FrontEnd developer</div>
+        <button class="navbar-toggler btn  border-white me-md-5 me-2" data-bs-toggle="collapse"
+          data-bs-target=".collapse" aria-controls="collapse" aria-expanded="false">
+          <span class="navbar-toggler-ico "><i class="fa-solid fa-bars fa-md text-white"></i></span>
+        </button>
+        <div class="collapse navbar-collapse me-md-5 ">
+          <ul class="navbar-nav d-flex flex-row  justify-content-around ms-auto mt-md-0 ">
+            <li class="nav-item  px-lg-5 px-md-4 ">
+              <a class="nav-link" href="#Aboutme"><span class="btn btn-outline-light btn-sm "> About me</span></a>
+            </li>
+            <li class="nav-item px-lg-5 px-md-4 ">
+              <a class="nav-link" href="#Skills"><span class="btn btn-outline-light btn-sm"> Skills</span></a>
+            </li>
+            <li class="nav-item px-lg-5 px-md-4 ">
+              <a class="nav-link" href="#Work"><span class="btn btn-outline-light btn-sm"> Work</span></a>
+            </li>
+            <li class="nav-item px-lg-5 px-md-4">
+              <a class="nav-link" href="#Contact"><span class="btn btn-outline-light btn-sm"> Contact</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </nav>
+
+  </header>
+
+  <main class="d-flex flex-column">
+    <div id="Start" class=" bg-dark text-white " style="position: relative; height: fit-content; ">
+      <div class="container font-monospace fst-italic">
+
+        <span class="h3" style="">
+          <p class="col text-start ">I turn pixels into experiences. I don't just code, I craft <br>digital journeys
+            that
+            engage and
+            inspire.</p>
+          <p class="text-end ">The web is my playground. Let's push boundaries, defy expectations,<br> and build
+            something
+            truly remarkable.</p>
+
+          <p class="text-start ">Passionate, meticulous, and always learning.<br> I'm the developer who takes your
+            vision
+            to the next
+            level.</p><br>
+        </span>
+
+        <span class="h3">
+          <p class="text-end">I may code with caffeine and fueled by puns.But don't worry,<br> your website will be
+            bug-free (and
+            pun-free, if you insist).</p> <br>
+          <p class="text-start ">Frontend development isn't rocket science, but it's close.<br> My skills are out of
+            this
+            world, especially when
+            it
+            comes to clean code and intuitive design.</p><br>
+          <p class="text-end">The web isn't just static pages, it's a living, breathing masterpiece.<br>And I'm the
+            artist
+            who
+            paints it with
+            code.</p>
+        </span>
+      </div>
+    </div>
+    <div id="Aboutme" class="text-break lh-lg text-center fs-3 bg-dark text-white" style="  ">
+      <div class="container ">
+        <small class=" font-monospace h4 fw-bold">**Hi there! **</small>
+        <span class=" font-monospace fst-italic d-flex flex-wrap">
+          <span class="h3">I'm <small class="h4 text-warning  fw-bold">Deepakkumar</small>, a second year at <small
+              class=" fw-bolder h3">Nandha Engineering College(Autonomous)</small> with a fire in my heart for building
+            user-friendly
+            and impactful web experiences.</span><br>
+
+          <span class="h3"> I'm drawn to clean, minimalist designs where every element has a purpose. I'm currently
+            diving deep
+            into
+            HTML, CSS, JavaScript, and React, eager to turn my learnings into elegant solutions for real-world
+            challenges.</span><br>
+
+          <span class="h3"> This portfolio showcases some of my best work. Take a peek to see what I'm capable
+            of!</span><br>
+
+          <span class="h3">I'm actively seeking internship opportunities to learn from experienced professionals and
+            contribute my
+            skills. If you're looking for a passionate and quick learner with a strong foundation in web development,
+            let's connect!</span>
+        </span>
+      </div>    </div>
+
+    <div id="Skills" class="h3  fst-italic font-monospace bg-dark text-white"
+      style="position: relative; height:100vh; overflow-y: scroll;">
+      <div class="container">
+
+
+        <div class="container skill1 w-75 rounded-3 d-flex flex-column mt-4 gap-4"
+          style="height: fit-content; background-color: rgba(75, 74, 74, 0.3);"> <b class="text-center">Front-End            Languages</b>
+          <abbr title="HTML - Hypertext Markup Language">
+            <div class="d-flex align-items-center gap-2 w-100">
+              <div class=""> <img
+                  src="https://w7.pngwing.com/pngs/840/443/png-transparent-html-5-logo-web-development-html-css3-canvas-element-web-design-w3c-html5-logo-miscellaneous-text-orange-thumbnail.png"
+                  width="30" alt="">
+              </div>
+              <div class="progress bg-secondary w-100" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar progress-bar-striped bg-success w-100"><b>100%</b></div>
+              </div>
+            </div>
+          </abbr>
+          <abbr title="CSS - Cascading Style Sheets">
+            <div class="d-flex align-items-center gap-2 w-100">
+              <div><img
+                  src="https://banner2.cleanpng.com/20180503/thq/kisspng-html-css3-cascading-style-sheets-logo-markup-langu-digital-agency-5aeb5d73ccaf16.1752969515253743238384.jpg"
+                  width="30" alt=""></div>
+              <div class="progress bg-secondary w-100" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar progress-bar-striped bg-success w-100"><b>100%</b></div>
+              </div>
+            </div>
+          </abbr>
+          <abbr title="JavaScript">
+            <div class="d-flex align-items-center gap-2 w-100">
+              <div><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" width="30" alt="">
+              </div>
+              <div class="progress bg-secondary w-100" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated w-50"><b>50%</b></div>
+              </div>
+            </div>
+          </abbr>
+        </div>
+
+        <br>
+        <div class="container skill2 w-75 rounded-3 d-flex flex-column gap-4"
+          style="background-color: rgba(75, 74, 74, 0.3);"><b class="text-center">Frameworks and Libraries</b>
+          <abbr title="React.js">
+            <div class="d-flex align-items-center gap-2">
+              <div><img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3YraeeRnBhf1Sd-QQndtiCYLL5RTFWDhvjcooa9c8NqWeU6D0vP3x-3l1bfX5vskcToE&usqp=CAU"
+                  width="30" alt=""> </div>
+              <div class="progress bg-secondary w-100" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar bg-secondary  w-100">
+                  <div class="d-flex justify-content-center">
+                    <div class="spinner-border spinner-border-sm"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </abbr>
+          <abbr title="Bootstrap">
+            <div class="d-flex align-items-center gap-2">
+              <div><img src="https://brandlogos.net/wp-content/uploads/2021/09/bootstrap-logo.png" width="30" alt="">
+              </div>
+              <div class="progress bg-secondary w-100" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar progress-bar-striped bg-success w-100"><b>100%</b></div>
+              </div>
+            </div>
+          </abbr>
+        </div>
+
+        <br>
+
+        <div class="container skill3 w-75 rounded-3 d-flex flex-column gap-4"
+          style="background-color: rgba(75, 74, 74, 0.3);"><b class="text-center">Tools</b>
+          <abbr title="Git">
+            <div class="d-flex align-items-center gap-2">
+              <div><img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" width="30" alt=""></div>
+              <div class="progress bg-secondary w-100" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar progress-bar-striped bg-success w-100"><b>100%</b></div>
+              </div>
+            </div>
+          </abbr>
+          <abbr title="Github">
+            <div class="d-flex align-items-center gap-2">
+              <div><img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/800px-GitHub_Invertocat_Logo.svg.png"
+                  width="30" alt=""></div>
+              <div class="progress bg-seconday w-100" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar progress-bar-striped bg-success w-100"><b>100%</b></div>
+              </div>
+            </div>
+          </abbr>
+          <abbr title="Figma">
+            <div class="d-flex align-items-center gap-2">
+              <div><img
+                  src="https://cdn.sanity.io/images/599r6htc/localized/46a76c802176eb17b04e12108de7e7e0f3736dc6-1024x1024.png?w=804&h=804&q=75&fit=max&auto=format"
+                  width="30" alt=""></div>
+              <div class="progress bg-secondary w-100" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar bg-secondary w-100">
+                  <div class="d-flex justify-content-center">
+                    <div class="spinner-border spinner-border-sm"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </abbr>
+        </div>
+
+        <br>
+
+        <div class="container skill4 w-75 rounded-3 d-flex flex-column gap-4"
+          style="background-color: rgba(75, 74, 74, 0.3);"><b class="text-center">Back-End Languages</b>
+          <abbr title="Node.js">
+            <div class="d-flex align-items-center gap-2">
+              <div><img src="https://static-00.iconduck.com/assets.00/node-js-icon-454x512-nztofx17.png" width="30"
+                  alt=""></div>
+              <div class="progress bg-secondary w-100" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar bg-secondary w-100">
+                  <div class="d-flex justify-content-center">
+                    <div class="spinner-border  spinner-border-sm"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </abbr>
+          <abbr title="Python">
+            <div class="d-flex align-items-center gap-2">
+              <div><img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png"
+                  width="30" alt=""></div>
+              <div class="progress bg-secondary w-100" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger w-25"><b>30%</b></div>
+              </div>
+            </div>
+          </abbr>
+          <abbr title="PHP - Personal Home Page Tools.">
+            <div class="d-flex align-items-center gap-2">
+              <div><img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/2560px-PHP-logo.svg.png"
+                  width="30" alt=""></div>
+              <div class="progress bg-secondary w-100" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar bg-secondary w-100">
+                  <div class="d-flex justify-content-center">
+                    <div class="spinner-border spinner-border-sm"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </abbr>
+        </div>
+
+        <br>
+
+        <div class="container skill5 w-75 rounded-3 d-flex flex-column mb-4 gap-4"
+          style="background-color: rgba(75, 74, 74, 0.3);"><b class="text-center">Databases</b>
+          <abbr title="MySQL">
+            <div class="d-flex align-items-center gap-2">
+              <div><img src="https://iconape.com/wp-content/files/mg/80630/svg/mysql-4.svg" width="30" alt=""></div>
+              <div class="progress bg-secondary w-100" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar bg-secondary w-100">
+                  <div class="d-flex justify-content-center">
+                    <div class="spinner-border spinner-border-sm"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </abbr>
+          <abbr title="MongoDB-Mongo DataBase or Mongolian Database">
+            <div class="d-flex align-items-center gap-2">
+              <div><img
+                  src="https://w7.pngwing.com/pngs/956/695/png-transparent-mongodb-original-wordmark-logo-icon-thumbnail.png"
+                  width="30" alt=""></div>
+              <div class="progress bg-secondary w-100" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar bg-secondary w-100">
+                  <div class="d-flex justify-content-center">
+                    <div class="spinner-border spinner-border-sm"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </abbr>
+        </div>
+      </div>
+    </div>
+    <div id="Work"   class="text-white bg-dark " style=" height: fit-content;">
+      <div class="container">
+        <b>Interactive Data Visualization:</b>
+        <li>Stock market dashboard
+        <li>Real-time weather map
+        <li>Interactive music visualization
+        <li>Animated charts & graphs<br>
+
+          <b>Complex User Interfaces:</b>
+        <li>Drag-and-drop file manager
+        <li>Collaborative drawing app
+        <li>Kanban board with advanced features
+        <li>Mind mapping tool<br>
+
+          <b>Web Applications with Functionality:</b>
+        <li>E-commerce store with user accounts
+        <li>Booking management system
+        <li>Task management app with integrations
+        <li>Social media platform with specific features<br>
+
+          <b>Real-Time and Multiplayer Experiences:</b>
+        <li>Multiplayer trivia game
+        <li>Drawing game with live collaboration
+        <li>Chat application with user presence
+        <li>Interactive whiteboard with real-time updates<br>
+
+          <b>Advanced Design and Animation:</b>
+        <li>Single-page application with smooth transitions
+        <li>3D object modeling and animation in the browser
+        <li>Parallax scrolling effects with depth and immersion
+        <li>Interactive storytelling website with unique visuals
+      </div>
+    </div>
+
+    <div id="Contact" class="bg-dark text-white " style="position: relative; height: fit-content;">
+      <div class="container">
+        <div class="calltoaction  d-flex flex-wrap justify-content-evenly gap-3">
+          <div class="text-center h3 fst-italic fw-bolder">"Let's build something incredible together."</div>
+          <div class="text-center h3 fst-italic fw-bolder "> "Looking for a developer for your e-commerce store? Let's
+            talk!"</div>
+          <div class="text-center h3 fst-italic fw-bolder "> "Need help with front-end development? I'm your guy."</div>
+          <div class="text-center h3 fst-italic fw-bolder ">"I'm open to freelance projects for startups and growing
+            businesses."
+          </div>
+        </div>
+        <div class=" d-flex justify-content-center align-items-center gap-2 ">
+          <i class="fa-regular fa-envelope display-3"></i>
+          <a class=" text-decoration-none d-flex align-items-center " href="#d"><span
+              class="h3">dktopg2@gmail.com</span></a>
+        </div>
+        <h3 class="text-center h3 pt- fw-bolder"> For more information<br><small>91-9025454148</small></h3>
+        <br>
+
+        <div class="container mt-3 d-flex justify-content-around ">
+          <a href="#d"> <i class="fa-brands fa-linkedin display-3"></a></i>
+          <a href="#d"><i class="fa-brands fa-square-instagram display-3"></a></i>
+          <a href="#d"><i class="fa-brands fa-x-twitter display-3"></a></i>
+          <a href="#d"><i class="fa-brands fa-github display-3"></a></i>
+        </div>
+      </div><br>
+      <marquee behavior="" direction="" class="h3 fst-italic fw-bolder text-white">I'm actively seeking internship
+        opportunities to learn from experienced professionals and contribute my skills. If you're looking for a passionate
+        and quick learner with a strong foundation in web development, let's connect!</marquee>
+    </main>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .videos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .video {
+        width: 300px;
+        margin-bottom: 30px;
+    }
+
+    .thumbnail {
+        width: 100%;
+        height: 170px;
+    }
+
+    .thumbnail img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+
+    .author {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .author img {
+        object-fit: cover;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        margin-right: 10px;
+    }
+
+    .title {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .title h3 {
+        color: rgb(3, 3, 3);
+        line-height: 18px;
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    .title a,
+    .title span {
+        text-decoration: none;
+        color: rgb(96, 96, 96);
+        font-size: 12px;
+    }
+
+    .details {
+        display: flex;
+    }
+    .row{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  margin-left: 10px;
+}
+
+.search {
+  position: relative;
+  width: 50%;
+}
+
+.search input {
+  width: 100%;
+  padding: 10px;
+  border: 1px static black;
+  border-radius: 50%;
+  height: 100%;
+  border-radius: 2px 0 0 2px;
+}
+
+.search input:focus {
+  outline: none;
+  border: 1px solid #ddd;
+}
+
+.search button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 60px;
+  border: none;
+  background-color: transparent;
+  color: #ccc;
+}
+
+.search button:hover {
+  background-color: #ddd;
+  color: #333;
+}
+
+.mic {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.icons i {
+  margin-left: 10px;
+  cursor: pointer;
+}
+</style>
+    <header>
+        <div class="logo left">
+          <i id="menu" class="material-icons">menu</i>
+          <img src="https://www.freecodecamp.org/news/content/images/2022/01/yt-logo.png">
+        </div>
+        <div class="search center">
+          <form action="">
+            <input type="text" placeholder="Search" />
+            <button><i class="material-icons">search</i></button>
+          </form>
+          <i class="material-icons mic">mic</i>
+        </div>
+        <div class="icons right">
+          <i class="material-icons">videocam</i>
+          <i class="material-icons">apps</i>
+          <i class="material-icons">notifications</i>
+          <i class="material-icons display-this">account_circle</i>
+        </div>
+      </header>
+<body>
+    <div class="row">
+        <div class="videos">
+            <div class="video">
+                <div class="thumbnail">
+                    <img src="#" alt="" />
+                </div>
+
+                <div class="details">
+                    <div class="author">
+                        <img src="#" alt="" />
+                    </div>
+                    <div class="title">
+                        <h3>
+                            Project to get Internship in Nutz Tech | Deepakkumar
+                        </h3>
+                        <a href="">
+                            Erode Anthiyur
+                        </a>
+                        <span> 2M Views • 3 Months Ago </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="videos">
+            <div class="video">
+                <div class="thumbnail">
+                    <img src="#" alt="" />
+                </div>
+
+                <div class="details">
+                    <div class="author">
+                        <img src="#" alt="" />
+                    </div>
+                    <div class="title">
+                        <h3>
+                            Project to get Internship in Nutz Tech | Deepakkumar
+                        </h3>
+                        <a href="">
+                            Erode Anthiyur
+                        </a>
+                        <span> 2M Views • 3 Months Ago </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="videos">
+            <div class="video">
+                <div class="thumbnail">
+                    <img src="#" alt="" />
+                </div>
+
+                <div class="details">
+                    <div class="author">
+                        <img src="#" alt="" />
+                    </div>
+                    <div class="title">
+                        <h3>
+                            Project to get Internship in Nutz Tech | Deepakkumar
+                        </h3>
+                        <a href="">
+                            Erode Anthiyur
+                        </a>
+                        <span> 2M Views • 3 Months Ago </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="videos">
+            <div class="video">
+                <div class="thumbnail">
+                    <img src="#" alt="" />
+                </div>
+
+                <div class="details">
+                    <div class="author">
+                        <img src="#" alt="" />
+                    </div>
+                    <div class="title">
+                        <h3>
+                            Project to get Internship in Nutz Tech | Deepakkumar
+                        </h3>
+                        <a href="">
+                            Erode Anthiyur
+                        </a>
+                        <span> 2M Views • 3 Months Ago </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="videos">
+            <div class="video">
+                <div class="thumbnail">
+                    <img src="#" alt="" />
+                </div>
+
+                <div class="details">
+                    <div class="author">
+                        <img src="#" alt="" />
+                    </div>
+                    <div class="title">
+                        <h3>
+                            Project to get Internship in Nutz Tech | Deepakkumar
+                        </h3>
+                        <a href="">
+                            Erode Anthiyur
+                        </a>
+                        <span> 2M Views • 3 Months Ago </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="videos">
+            <div class="video">
+                <div class="thumbnail">
+                    <img src="#" alt="" />
+                </div>
+
+                <div class="details">
+                    <div class="author">
+                        <img src="#" alt="" />
+                    </div>
+                    <div class="title">
+                        <h3>
+                            Project to get Internship in Nutz Tech | Deepakkumar
+                        </h3>
+                        <a href="">
+                            Erode Anthiyur
+                        </a>
+                        <span> 2M Views • 3 Months Ago </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="videos">
+            <div class="video">
+                <div class="thumbnail">
+                    <img src="#" alt="" />
+                </div>
+
+                <div class="details">
+                    <div class="author">
+                        <img src="#" alt="" />
+                    </div>
+                    <div class="title">
+                        <h3>
+                            Project to get Internship in Nutz Tech | Deepakkumar
+                        </h3>
+                        <a href="">
+                            Erode Anthiyur
+                        </a>
+                        <span> 2M Views • 3 Months Ago </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="videos">
+            <div class="video">
+                <div class="thumbnail">
+                    <img src="#" alt="" />
+                </div>
+
+                <div class="details">
+                    <div class="author">
+                        <img src="#" alt="" />
+                    </div>
+                    <div class="title">
+                        <h3>
+                            Project to get Internship in Nutz Tech | Deepakkumar
+                        </h3>
+                        <a href="">
+                            Erode Anthiyur
+                        </a>
+                        <span> 2M Views • 3 Months Ago </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>   
+     <div class="row">
+        <div class="videos">
+            <div class="video">
+                <div class="thumbnail">
+                    <img src="#" alt="" />
+                </div>
+
+                <div class="details">
+                    <div class="author">
+                        <img src="#" alt="" />
+                    </div>
+                    <div class="title">
+                        <h3>
+                            Project to get Internship in Nutz Tech | Deepakkumar
+                        </h3>
+                        <a href="">
+                            Erode Anthiyur
+                        </a>
+                        <span> 2M Views • 3 Months Ago </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="videos">
+            <div class="video">
+                <div class="thumbnail">
+                    <img src="#" alt="" />
+                </div>
+
+                <div class="details">
+                    <div class="author">
+                        <img src="#" alt="" />
+                    </div>
+                    <div class="title">
+                        <h3>
+                            Project to get Internship in Nutz Tech | Deepakkumar
+                        </h3>
+                        <a href="">
+                            Erode Anthiyur
+                        </a>
+                        <span> 2M Views • 3 Months Ago </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="videos">
+            <div class="video">
+                <div class="thumbnail">
+                    <img src="#" alt="" />
+                </div>
+
+                <div class="details">
+                    <div class="author">
+                        <img src="#" alt="" />
+                    </div>
+                    <div class="title">
+                        <h3>
+                            Project to get Internship in Nutz Tech | Deepakkumar
+                        </h3>
+                        <a href="">
+                            Erode Anthiyur
+                        </a>
+                        <span> 2M Views • 3 Months Ago </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="videos">
+            <div class="video">
+                <div class="thumbnail">
+                    <img src="#" alt="" />
+                </div>
+
+                <div class="details">
+                    <div class="author">
+                        <img src="#" alt="" />
+                    </div>
+                    <div class="title">
+                        <h3>
+                            Project to get Internship in Nutz Tech | Deepakkumar
+                        </h3>
+                        <a href="">
+                            Erode Anthiyur
+                        </a>
+                        <span> 2M Views • 3 Months Ago </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="videos">
+            <div class="video">
+                <div class="thumbnail">
+                    <img src="#" alt="" />
+                </div>
+
+                <div class="details">
+                    <div class="author">
+                        <img src="#" alt="" />
+                    </div>
+                    <div class="title">
+                        <h3>
+                            Project to get Internship in Nutz Tech | Deepakkumar
+                        </h3>
+                        <a href="">
+                            Erode Anthiyur
+                        </a>
+                        <span> 2M Views • 3 Months Ago </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="videos">
+            <div class="video">
+                <div class="thumbnail">
+                    <img src="#" alt="" />
+                </div>
+
+                <div class="details">
+                    <div class="author">
+                        <img src="#" alt="" />
+                    </div>
+                    <div class="title">
+                        <h3>
+                            Project to get Internship in Nutz Tech | Deepakkumar
+                        </h3>
+                        <a href="">
+                            Erode Anthiyur
+                        </a>
+                        <span> 2M Views • 3 Months Ago </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="videos">
+            <div class="video">
+                <div class="thumbnail">
+                    <img src="#" alt="" />
+                </div>
+
+                <div class="details">
+                    <div class="author">
+                        <img src="#" alt="" />
+                    </div>
+                    <div class="title">
+                        <h3>
+                            Project to get Internship in Nutz Tech | Deepakkumar
+                        </h3>
+                        <a href="">
+                            Erode Anthiyur
+                        </a>
+                        <span> 2M Views • 3 Months Ago </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="videos">
+            <div class="video">
+                <div class="thumbnail">
+                    <img src="#" alt="" />
+                </div>
+
+                <div class="details">
+                    <div class="author">
+                        <img src="#" alt="" />
+                    </div>
+                    <div class="title">
+                        <h3>
+                            Project to get Internship in Nutz Tech | Deepakkumar
+                        </h3>
+                        <a href="">
+                            Erode Anthiyur
+                        </a>
+                        <span> 2M Views • 3 Months Ago </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="videos">
+            <div class="video">
+                <div class="thumbnail">
+                    <img src="#" alt="" />
+                </div>
+
+                <div class="details">
+                    <div class="author">
+                        <img src="#" alt="" />
+                    </div>
+                    <div class="title">
+                        <h3>
+                            Project to get Internship in Nutz Tech | Deepakkumar
+                        </h3>
+                        <a href="">
+                            Erode Anthiyur
+                        </a>
+                        <span> 2M Views • 3 Months Ago </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="videos">
+            <div class="video">
+                <div class="thumbnail">
+                    <img src="#" alt="" />
+                </div>
+
+                <div class="details">
+                    <div class="author">
+                        <img src="#" alt="" />
+                    </div>
+                    <div class="title">
+                        <h3>
+                            Project to get Internship in Nutz Tech | Deepakkumar
+                        </h3>
+                        <a href="">
+                            Erode Anthiyur
+                        </a>
+                        <span> 2M Views • 3 Months Ago </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="videos">
+            <div class="video">
+                <div class="thumbnail">
+                    <img src="#" alt="" />
+                </div>
+
+                <div class="details">
+                    <div class="author">
+                        <img src="#" alt="" />
+                    </div>
+                    <div class="title">
+                        <h3>
+                            Project to get Internship in Nutz Tech | Deepakkumar
+                        </h3>
+                        <a href="">
+                            Erode Anthiyur
+                        </a>
+                        <span> 2M Views • 3 Months Ago </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="videos">
+            <div class="video">
+                <div class="thumbnail">
+                    <img src="#" alt="" />
+                </div>
+
+                <div class="details">
+                    <div class="author">
+                        <img src="#" alt="" />
+                    </div>
+                    <div class="title">
+                        <h3>
+                            Project to get Internship in Nutz Tech | Deepakkumar
+                        </h3>
+                        <a href="">
+                            Erode Anthiyur
+                        </a>
+                        <span> 2M Views • 3 Months Ago </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="videos">
+            <div class="video">
+                <div class="thumbnail">
+                    <img src="#" alt="" />
+                </div>
+
+                <div class="details">
+                    <div class="author">
+                        <img src="#" alt="" />
+                    </div>
+                    <div class="title">
+                        <h3>
+                            Project to get Internship in Nutz Tech | Deepakkumar
+                        </h3>
+                        <a href="">
+                            Erode Anthiyur
+                        </a>
+                        <span> 2M Views • 3 Months Ago </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="videos">
+            <div class="video">
+                <div class="thumbnail">
+                    <img src="#" alt="" />
+                </div>
+
+                <div class="details">
+                    <div class="author">
+                        <img src="#" alt="" />
+                    </div>
+                    <div class="title">
+                        <h3>
+                            Project to get Internship in Nutz Tech | Deepakkumar
+                        </h3>
+                        <a href="">
+                            Erode Anthiyur
+                        </a>
+                        <span> 2M Views • 3 Months Ago </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="videos">
+            <div class="video">
+                <div class="thumbnail">
+                    <img src="#" alt="" />
+                </div>
+
+                <div class="details">
+                    <div class="author">
+                        <img src="#" alt="" />
+                    </div>
+                    <div class="title">
+                        <h3>
+                            Project to get Internship in Nutz Tech | Deepakkumar
+                        </h3>
+                        <a href="">
+                            Erode Anthiyur
+                        </a>
+                        <span> 2M Views • 3 Months Ago </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="videos">
+            <div class="video">
+                <div class="thumbnail">
+                    <img src="#" alt="" />
+                </div>
+
+                <div class="details">
+                    <div class="author">
+                        <img src="#" alt="" />
+                    </div>
+                    <div class="title">
+                        <h3>
+                            Project to get Internship in Nutz Tech | Deepakkumar
+                        </h3>
+                        <a href="">
+                            Erode Anthiyur
+                        </a>
+                        <span> 2M Views • 3 Months Ago </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="videos">
+            <div class="video">
+                <div class="thumbnail">
+                    <img src="#" alt="" />
+                </div>
+
+                <div class="details">
+                    <div class="author">
+                        <img src="#" alt="" />
+                    </div>
+                    <div class="title">
+                        <h3>
+                            Project to get Internship in Nutz Tech | Deepakkumar
+                        </h3>
+                        <a href="">
+                            Erode Anthiyur
+                        </a>
+                        <span> 2M Views • 3 Months Ago </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="videos">
+            <div class="video">
+                <div class="thumbnail">
+                    <img src="#" alt="" />
+                </div>
+
+                <div class="details">
+                    <div class="author">
+                        <img src="#" alt="" />
+                    </div>
+                    <div class="title">
+                        <h3>
+                            Project to get Internship in Nutz Tech | Deepakkumar
+                        </h3>
+                        <a href="">
+                            Erode Anthiyur
+                        </a>
+                        <span> 2M Views • 3 Months Ago </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="videos">
+            <div class="video">
+                <div class="thumbnail">
+                    <img src="#" alt="" />
+                </div>
+
+                <div class="details">
+                    <div class="author">
+                        <img src="#" alt="" />
+                    </div>
+                    <div class="title">
+                        <h3>
+                            Project to get Internship in Nutz Tech | Deepakkumar
+                        </h3>
+                        <a href="">
+                            Erode Anthiyur
+                        </a>
+                        <span> 2M Views • 3 Months Ago </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="videos">
+            <div class="video">
+                <div class="thumbnail">
+                    <img src="#" alt="" />
+                </div>
+
+                <div class="details">
+                    <div class="author">
+                        <img src="#" alt="" />
+                    </div>
+                    <div class="title">
+                        <h3>
+                            Project to get Internship in Nutz Tech | Deepakkumar
+                        </h3>
+                        <a href="">
+                            Erode Anthiyur
+                        </a>
+                        <span> 2M Views • 3 Months Ago </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="videos">
+            <div class="video">
+                <div class="thumbnail">
+                    <img src="#" alt="" />
+                </div>
+
+                <div class="details">
+                    <div class="author">
+                        <img src="#" alt="" />
+                    </div>
+                    <div class="title">
+                        <h3>
+                            Project to get Internship in Nutz Tech | Deepakkumar
+                        </h3>
+                        <a href="">
+                            Erode Anthiyur
+                        </a>
+                        <span> 2M Views • 3 Months Ago </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="videos">
+            <div class="video">
+                <div class="thumbnail">
+                    <img src="#" alt="" />
+                </div>
+
+                <div class="details">
+                    <div class="author">
+                        <img src="#" alt="" />
+                    </div>
+                    <div class="title">
+                        <h3>
+                            Project to get Internship in Nutz Tech | Deepakkumar
+                        </h3>
+                        <a href="">
+                            Erode Anthiyur
+                        </a>
+                        <span> 2M Views • 3 Months Ago </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="videos">
+            <div class="video">
+                <div class="thumbnail">
+                    <img src="#" alt="" />
+                </div>
+
+                <div class="details">
+                    <div class="author">
+                        <img src="#" alt="" />
+                    </div>
+                    <div class="title">
+                        <h3>
+                            Project to get Internship in Nutz Tech | Deepakkumar
+                        </h3>
+                        <a href="">
+                            Erode Anthiyur
+                        </a>
+                        <span> 2M Views • 3 Months Ago </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="videos">
+            <div class="video">
+                <div class="thumbnail">
+                    <img src="#" alt="" />
+                </div>
+
+                <div class="details">
+                    <div class="author">
+                        <img src="#" alt="" />
+                    </div>
+                    <div class="title">
+                        <h3>
+                            Project to get Internship in Nutz Tech | Deepakkumar
+                        </h3>
+                        <a href="">
+                            Erode Anthiyur
+                        </a>
+                        <span> 2M Views • 3 Months Ago </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+        const videos = document.querySelectorAll('.video');
+
+        const lazyLoad = () => {
+            videos.forEach((video) => {
+                const thumbnail = video.querySelector('.thumbnail img');
+                const source = thumbnail.getAttribute('data-src');
+
+                if (thumbnail.src !== source) {
+                    thumbnail.src = source;
+                }
+            });
+        };
+
+        window.addEventListener('scroll', lazyLoad);
+        window.addEventListener('load', lazyLoad);
+    </script>
+</body>
+
+</html>
