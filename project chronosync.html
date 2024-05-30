@@ -11,94 +11,42 @@
 <style>
     ol {
         font-family: Georgia, serif;
-        margin: 0px 20px 0px 0px;
-    }
-
-    #inputtext {
-        width: 500px;
-        height: 36px;
-    }
-
-    marquee {
-        font-size: ;
-    }
-
-    #targetdatetime1 {
-        font-size: 12px;
-    }
-
-    #addbtn {
-        width: 100px;
-    }
-
-    @media screen and (max-width: 600px) {
-        marquee {
-            font-size: small;
-            color: aqua;
-        }
-
-        #inputtext {
-            width: 260px;
-            height: 36px;
-        }
-
-        #targetdatetime1 {
-            width: 80px;
-        }
-
-        #addbtn {
-            width: 100px;
-        }
+        color: ;
     }
 </style>
 
 <body class="">
-    <div class="container mt-1 d-flex justify-content-center" style="height:px;">
-        <div id="floating" class="form-floating">
-            <input class="form-control" style="height: fit-content;" type="text" id="inputtext" placeholder="" required>
-            <label for="inputtext" class="w-100 ">
-                <marquee class="text-danger" behavior="" direction="">Enter your goal and also set target date.....
-                </marquee>
-            </label>
-        </div>
-        <div id="targetdatetime1" class=" d-flex flex-column justify-content-center " ">
-            <div class=" text-dark text-center ">Target Date</div>
+    <div class="todo-form mt-2 d-flex justify-content-center container">
+        <input class="form-control form-control-sm" type="text" id="inputtext" placeholder="Enter you Goal............" required>
+        <div id="targetdatetime1" class="" style="font-size: 11px;">
+            <div class=" text-center">Target Date</div>
             <input type="date" class="" id="targetdate">
+
         </div>
-        <button type="button" class="btn  btn-outline-success ms-2" id="addbtn"><b>Add</b></button>
+        <button type="button" class="btn btn-outline-success ms-1" id="addbtn"><b>Add</b></button>
         <p id="result"></p>
     </div>
-    <ol class="" id="todolist"></ol>
+    <ol class="container" id="todolist"></ol>
 
     <script>
-        //rough
-        let negativeNumber = -15;
-        let len = String(negativeNumber).length
-        let positiveNumber = Math.abs(negativeNumber);
-        console.log(positiveNumber); // Output: 5
-        console.log(len)
-        //get element from the html************ 
         const inputtxt = document.getElementById("inputtext");
         const addbtn = document.getElementById("addbtn");
         const todolist = document.getElementById("todolist");
         const targetdate = document.getElementById("targetdate");
-        const targettime = document.getElementById("targettime");
-        const targetdatetime1 = document.getElementById("targetdatetime1");
+        const targettime = document.getElementById("targettime")
 
         const d = new Date();
-        //eventlistener for addbtn
+
         addbtn.addEventListener("click", function () {
-            //setting target date properly******
             const text = inputtxt.value;
-            const targetdate1 = targetdate.value;
+            const targetdate11 = targetdate.value;
+            const targetdate1=new Date(targetdate11)
+         
+            const [year, month, day] = targetdate11.split('-');
+            const targetdate2 =day+"-"+month+"-"+year;
+           
 
-            const [year, month, day] = targetdate1.split('-');
-            const targetdate2 = day + "-" + month + "-" + year;
-
-            //what if the input box has a value******************
             if (text) {
-                //create tags in js***********************************
-                inputtxt.classList.remove("is-invalid");
                 const oneitem = document.createElement("div");
                 const todoitem = document.createElement("li");
                 const todop = document.createElement("span");
@@ -110,17 +58,12 @@
                 const datesection1 = document.createElement("span");
                 const datesection3 = document.createElement("span");
                 const rightsection = document.createElement("div");
-                datehead.style.marginTop = "2px"
                 const dd = d.getDate();
                 const m = ('0' + (d.getMonth() + 1)).slice(-2);
                 const y = (d.getFullYear());
                 datesection1.innerHTML = "<b>Added:</b> " + dd + "-" + m + "-" + y;
-                const sdate = (day - dd);
-                const smonth = (month - m);
-                const syear = (year - y);
-                //eventlistener for donebtn**************************
+
                 donebtn.addEventListener("click", function () {
-                    //if condition for donebtn 
                     if (donebtn.innerText == "Done") {
                         const d = new Date();
                         todop1.style.display = "flex";
@@ -130,179 +73,82 @@
                         todoitem.style.textDecoration = "line-through";
                         todoitem.style.textDecorationThickness = "4px"
                         todoitem.style.textDecorationColor = "red";
-                        todoitem.style.margin = "10px 0px 0px 0px";
-
-                        let ddd = d.getDate();
-                        let mm = ('0' + (d.getMonth() + 1)).slice(-2);
-                        let yy = (d.getFullYear());
-
-
-
-                        datesection.innerHTML = "<b>Done:</b> " + ddd + "-" + mm + "-" + yy;
-                        let subdate1 = (day - ddd)
-                        let submonth1 = (month - mm)
-                        let subyear1 = (year - yy)
-                        let subdate = Math.abs(subdate1);
-                        let submonth = Math.abs(submonth1);
-                        let subyear = Math.abs(subyear1);
-
-                        function beforestyle() {
-                            todop1.style.color = "yellow";
+                        todoitem.style.margin = "10px";
+                        const ddd = new Date();
+                        const diff1=targetdate1-ddd
+                        var differenceDays = Math.ceil(diff1 / (1000 * 60 * 60 * 24));
+                        datesection.innerHTML = "<b>Done:</b> " + ddd.getDate() + "-" + ('0'+ (ddd.getMonth() + 1)).slice(-2) + "-" + ddd.getFullYear();
+                        
+                        if(differenceDays>0){
+                        todop1.innerHTML="Completed "+differenceDays+" days before";
                         }
-                        function afterstyle() {
-                            todop1.style.color = "red";
+                        else if(differenceDays<0){
+                            todop1.innerHTML="Completed"+differenceDays+" days after";
                         }
-
-                        const completebefore = subdate + "-" + submonth + "-" + subyear;
-
-                        //main purpose of project,synchronize the date with task*****************************************************************************************************
-                        if ((year >= yy)) {
-                            if (year == yy) {
-                                todop1.innerHTML = "You complete " + submonth + " month " + subdate + " day before";
-                                beforestyle()
-
-                                if ((day == ddd) && (year == yy)) {
-                                    todop1.innerHTML = "You complete " + submonth + " month before";
-                                    beforestyle()
-
-                                }
-                                if ((month == mm) && (year == yy)) {
-                                    todop1.innerHTML = "You complete " + subdate + " day before";
-                                    beforestyle()
-                                }
-                            }
-                            if (month >= mm) {
-                                if (month == mm) {
-                                    todop1.innerHTML = "You complete " + subyear + " year " + subdate + " day before";
-                                    beforestyle()
-
-                                    if ((month == mm) && (year == yy)) {
-                                        todop1.innerHTML = "You complete " + subdate + " day before";
-                                        beforestyle()
-
-                                    }
-                                    if ((month == mm) && (day == ddd)) {
-                                        todop1.innerHTML = "You complete " + subyear + " year before";
-                                        beforestyle()
-
-                                    }
-
-                                }
-                                if (day >= ddd) {
-                                    if (day == ddd) {
-                                        todop1.innerHTML = "You complete " + subyear + " year " + submonth + " month before";
-                                        beforestyle()
-
-                                        if ((day == ddd) && (year == yy)) {
-                                            todop1.innerHTML = "You complete " + submonth + " month before";
-                                            beforestyle()
-
-                                        }
-                                        if ((month == mm) && (day == ddd)) {
-                                            todop1.innerHTML = "You complete " + subyear + " year before";
-                                            beforestyle()
-
-                                        }
-                                    }
-                                }
-                            }
+                        else if(!targetdate11){
+                            todop1.innerHTML="you didn't enter target date";
                         }
-                        if ((year == yy) && (month == mm) && (day == ddd)) {
-                            todop1.innerHTML = "You complete your target day";
-                            beforestyle()
-
+                        else{
+                            todop1.innerHTML="you complete your goal at your target date";
                         }
-                        if ((year < yy)) {
-                            if (year == yy) {
-                                todop1.innerHTML = "You complete " + submonth + " month " + subdate + " day after";
-                                afterstyle()
-
-
-                                if ((day == ddd) && (year == yy)) {
-                                    todop1.innerHTML = "You complete " + submonth + " month after";
-                                    afterstyle()
-
-                                }
-                                if ((month == mm) && (year == yy)) {
-                                    todop1.innerHTML = "You complete " + subdate + " day after";
-                                    afterstyle()
-
-                                }
-                            }
-                            if (month <= mm) {
-                                if (month == mm) {
-                                    todop1.innerHTML = "You complete " + subyear + " year " + subdate + " day after";
-                                    afterstyle()
-
-                                    if ((month == mm) && (year == yy)) {
-                                        todop1.innerHTML = "You complete " + subdate + " day after";
-                                        afterstyle()
-
-                                    }
-                                    if ((month == mm) && (day == ddd)) {
-                                        todop1.innerHTML = "You complete " + subyear + " year after";
-                                        afterstyle()
-
-                                    }
-
-                                }
-                                if (day < ddd) {
-                                    if (day == ddd) {
-                                        todop1.innerHTML = "You complete " + subyear + " year " + submonth + " month after";
-                                        afterstyle()
-
-                                        if ((day == ddd) && (year == yy)) {
-                                            todop1.innerHTML = "You complete " + submonth + " month after";
-                                            afterstyle()
-
-                                        }
-                                        if ((month == mm) && (day == ddd)) {
-                                            todop1.innerHTML = "You complete " + subyear + " year after";
-                                            afterstyle()
-
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-
-
-                        if ((!day) && (!month) && (!year)) {
-                            todop1.innerHTML = "You didn't enter the proper target date!!!"
-                            afterstyle()
-                        }
+                        
+console.log(differenceDays)
 
                     }
-                    //else condition for donebtn
+
                     else {
-                        todop1.innerHTML = "You say Not done!!!!"
-                        todop1.style.color = "red";
                         todoitem.classList.toggle("done");
                         donebtn.innerText = "Done";
                         todoitem.style.textDecoration = "none";
                         datesection.innerHTML = "";
-                        datesection.innerHTML = "<b>LastDone:</b> " + d.getDate() + "-" + ('0' + (d.getMonth() + 1)).slice(-2) + "-" + ('0' + (d.getFullYear())).slice(-2);
-
+                        datesection.innerHTML = "<b>LastDone:</b> " + d.getDate() + "-" + ('0' + (d.getMonth() + 1)).slice(-2) + "-" +  ('0'+(d.getFullYear())).slice(-2);
+                        todop1.innerHTML="you say not done"
                     }
 
 
                 });
-                //mobile responsive*********************************************
+
                 window.addEventListener("resize", function () {
                     if (window.innerWidth <= 570) {
+                        datehead.style.fontSize = "10px";
+                        donebtn.style.borderRadius = "5px";
+                        donebtn.style.fontSize = "2px";
+                        todoitem.style.padding = "px";
+                        todoitem.style.margin = "0px 0px 0px 0px";
+                        rightsection.style.cssFloat = "right";
+                        rightsection.style.display = "flex";
+                        oneitem.style.backgroundColor = "rgba(220, 220, 220, 0.5)";
+                        datehead.style.margin = "0px 0px 0px 0px";
+                        datehead.style.borderRadius = "5px solid";
+                        datehead.style.position = "static";
+                        datehead.style.display = "flex";
+                        datehead.style.justifyContent = "space-around";
+                        todop.style.fontSize = "13px";
+                        todop.style.fontWeight = "bolder";
+                        todop.style.fontFamily = "Georgia, serif";
+                        oneitem.style.margin = "10px 0px 0px 2px"
+                        oneitem.style.borderRadius = "10px"
 
 
 
-
+                        todop.innerHTML = text;
+                        todop1.style.fontSize = "10px";
+                        donebtn.innerText = "Done"
+                        donebtn.style.fontSize = "9px"
+                        deleteButton.innerText = 'x';
+                        deleteButton.style.margin = '0px 0px 0px 15px';
+                        deleteButton.style.color = "red"
+                        datehead.style.backgroundColor = "grey"
+                        datehead.style.color = "blue"
 
                     } else {
-
+                        datehead.style.fontSize = "15px";
+                        todop1.style.fontSize = "15px";
 
                     }
                 });
 
-                //proper arrangement of tags that created in js***
+
                 todoitem.appendChild(todop);
                 todoitem.appendChild(rightsection);
                 rightsection.appendChild(donebtn);
@@ -318,14 +164,24 @@
 
 
 
-                //css work in js*********
+                donebtn.style.borderRadius = "5px";
+                todoitem.style.padding = "10px";
+                todoitem.style.color = "";
+                todoitem.style.margin = "0px 0px 0px 10px";
                 rightsection.style.cssFloat = "right";
+                oneitem.style.backgroundColor = "rgba(255, 255, 255, 0.2)";
+                datehead.style.margin = "px 10px 0px 10px";
+                datehead.style.position = "static";
                 datehead.style.display = "flex";
                 datehead.style.justifyContent = "space-evenly";
+                todop.style.fontSize = "16px";
+                todop.style.fontWeight = "bolder";
+                todop.style.fontFamily = "Georgia, serif";
+                oneitem.style.margin = "10px 0px 0px 0px"
+                oneitem.style.borderRadius = "10px"
 
 
 
-                //important contents created in js*****
                 inputtxt.value = "";
                 targetdate.value = "";
                 todop.innerHTML = text;
@@ -339,7 +195,7 @@
                 datehead.style.backgroundColor = "rgb(219, 221, 222)"
                 datehead.style.color = "blue"
 
-                //working function of delete button**
+
                 deleteButton.addEventListener('click', function () {
                     todolist.removeChild(oneitem);
                     todolist.removeChild(datehead);
@@ -347,13 +203,7 @@
 
                 });
             }
-            //what if the input box not contain the value**
-            if (text === "") {
-                inputtxt.classList.add("is-invalid");
-            }
-
         })
-
 
 
 
