@@ -7,7 +7,7 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-</head> 
+</head>
 <style>
     ol {
         font-family: Georgia, serif;
@@ -17,9 +17,10 @@
 
 <body class="">
     <div class="todo-form mt-2 d-flex justify-content-center container">
-        <input class="form-control form-control-sm" type="text" id="inputtext" placeholder="Enter you Goal............" required>
+        <input class="form-control form-control-sm" type="text" value="hello welcome" id="inputtext"
+            placeholder="Enter you Goal............" required>
         <div id="targetdatetime1" class="" style="font-size: 11px;">
-            <div class=" text-center">Target Date</div>
+            <div class="text-center">Target Date</div>
             <input type="date" class="" id="targetdate">
 
         </div>
@@ -40,17 +41,27 @@
         addbtn.addEventListener("click", function () {
             const text = inputtxt.value;
             const targetdate11 = targetdate.value;
-            const targetdate1=new Date(targetdate11)
-         
+            const targetdate1 = new Date(targetdate11)
+
             const [year, month, day] = targetdate11.split('-');
-            const targetdate2 =day+"-"+month+"-"+year;
-           
+            const targetdate2 = day + "-" + month + "-" + year;
 
             if (text) {
                 const oneitem = document.createElement("div");
                 const todoitem = document.createElement("li");
                 const todop = document.createElement("span");
-                const todop1 = document.createElement("span");
+                const todop1 = document.createElement("span");//todop1 is the result
+                //content editable for task
+                todop.addEventListener("dblclick", () => {
+                    todop.contentEditable = true
+                })
+                todop.addEventListener('mouseout', () => {
+                    // Check if the click event was not on the content editable element
+                    if (!todop.contains(todop.target)) {
+                        // Set the content editable property to false
+                        todop.contentEditable = false;
+                    }
+                })
                 const deleteButton = document.createElement('span');
                 const donebtn = document.createElement('button');
                 const datehead = document.createElement("span");
@@ -75,24 +86,24 @@
                         todoitem.style.textDecorationColor = "red";
                         todoitem.style.margin = "10px";
                         const ddd = new Date();
-                        const diff1=targetdate1-ddd
+                        const diff1 = targetdate1 - ddd
                         var differenceDays = Math.ceil(diff1 / (1000 * 60 * 60 * 24));
-                        datesection.innerHTML = "<b>Done:</b> " + ddd.getDate() + "-" + ('0'+ (ddd.getMonth() + 1)).slice(-2) + "-" + ddd.getFullYear();
-                        
-                        if(differenceDays>0){
-                        todop1.innerHTML="Completed "+differenceDays+" days before";
+                        datesection.innerHTML = "<b>Done:</b> " + ddd.getDate() + "-" + ('0' + (ddd.getMonth() + 1)).slice(-2) + "-" + ddd.getFullYear();
+
+                        if (differenceDays > 0) {
+                            todop1.innerHTML = "Completed " + differenceDays + " days before";
                         }
-                        else if(differenceDays<0){
-                            todop1.innerHTML="Completed"+differenceDays+" days after";
+                        else if (differenceDays < 0) {
+                            todop1.innerHTML = "Completed" + differenceDays + " days after";
                         }
-                        else if(!targetdate11){
-                            todop1.innerHTML="you didn't enter target date";
+                        else if (!targetdate11) {
+                            todop1.innerHTML = "you didn't enter target date";
                         }
-                        else{
-                            todop1.innerHTML="you complete your goal at your target date";
+                        else {
+                            todop1.innerHTML = "you complete your goal at your target date";
                         }
-                        
-console.log(differenceDays)
+
+                        console.log(differenceDays)
 
                     }
 
@@ -101,8 +112,8 @@ console.log(differenceDays)
                         donebtn.innerText = "Done";
                         todoitem.style.textDecoration = "none";
                         datesection.innerHTML = "";
-                        datesection.innerHTML = "<b>LastDone:</b> " + d.getDate() + "-" + ('0' + (d.getMonth() + 1)).slice(-2) + "-" +  ('0'+(d.getFullYear())).slice(-2);
-                        todop1.innerHTML="you say not done"
+                        datesection.innerHTML = "<b>LastDone:</b> " + d.getDate() + "-" + ('0' + (d.getMonth() + 1)).slice(-2) + "-" + ('0' + (d.getFullYear())).slice(-2);
+                        todop1.innerHTML = "you say not done"
                     }
 
 
@@ -186,7 +197,15 @@ console.log(differenceDays)
                 targetdate.value = "";
                 todop.innerHTML = text;
                 datesection3.innerHTML = "<b>Target:</b>" + targetdate2;
-
+                //content editable for target date
+                datesection3.addEventListener("dblclick", () => {
+                    datesection3.contentEditable = true
+                })
+                datesection3.addEventListener('mouseout', () => {
+                    if (!datesection3.contains(datesection3.target)) {
+                        datesection3.contentEditable = 'false';
+                    }
+                })
                 donebtn.innerText = "Done"
                 donebtn.style.fontSize = "smaller"
                 deleteButton.innerText = 'X';
