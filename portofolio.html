@@ -14,235 +14,326 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
   <style>
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 63px;
+    body {
+      background-color: black;
     }
 
-    .Start {}
-
-    #Skills .skill1:hover,
-    .skill2:hover,
-    .skill3:hover,
-    .skill4:hover,
-    .skill5:hover {
-      transform: scaleX(1.5);
-      padding: 50px 5px;
-      transition: transform 0.3s ease-in, padding 0.3s ease-in;
+    svg {
+      position: fixed;
     }
 
-    #Skills .skill1,
-    .skill2,
-    .skill3,
-    .skill4,
-    .skill5 {
-      transform: scaleX();
-      padding: 0;
-      transition: transform 0.3s ease-out, padding 0.3s ease-out;
+    #Start {
+      padding: 100px 0px;
+      display: flex;
+      flex-wrap: wrap-reverse;
+      justify-content: space-around;
+      font-size: xx-large;
+      align-items: center;
+      font-weight: 500;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      background-repeat: no-repeat;
+      background-size: contain;
     }
 
-    a {
-      color: black;
-      -webkit-text-stroke: 0.3px #ffffff;
+    #Start span {
+      transition: .5s ease-in-out;
+    }
+
+    #Start span:hover {
+      transition: .3s ease-in-out;
+      font-size: 35px;
+      text-shadow:
+        0px 0px 10px rgba(255, 255, 255, 0.96);
+    }
+
+
+    #Start img {
+      width: 250px;
+      height: 250px;
+      transition: .5s ease-in-out;
+    }
+
+    #Start img:hover {
+      width: 300px;
+      height: 300px;
+      transition: .5s ease-in-out;
+    }
+
+    #Start .role {
+      transition: .5s ease-in-out;
+      font-size: 50px;
+      text-shadow:
+        0px 0px 10px rgba(32, 238, 70, 0.96),
+        0px 0px 20px rgba(68, 246, 28, 0.932),
+        0px 0px 30px rgba(88, 242, 28, 0.959);
+    }
+
+    #Start .role:hover {
+      transition: .5s ease-in-out;
+      font-size: 50px;
+      text-shadow:
+        0px 0px 15px rgba(32, 238, 70, 0.96),
+        0px 0px 25px rgba(68, 246, 28, 0.932),
+        0px 0px 35px rgba(88, 242, 28, 0.959),
+        0px 0px 45px rgba(88, 242, 28, 0.959),
+        0px 0px 55px rgba(88, 242, 28, 0.959),
+        0px 0px 65px rgba(88, 242, 28, 0.959);
 
     }
 
-    a:hover {
+    #Aboutme {
+      padding-top: 60px;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    #Aboutme span {
+      color: white;
+      line-height: 55px;
+      padding-top: 10px;
+      transition: .7s ease-in-out;
+
+    }
+
+    #Aboutme .span1 {
+      color: white;
+      font-size: 20px;
+      padding-top: 10px;
+      transition: .7s ease-in-out;
+    }
+
+    #Aboutme .span2 {
+      color: white;
+      font-size: 20px;
+      padding-top: 10px;
+      transition: .7s ease-in-out;
+    }
+
+    #Aboutme .span3 {
+      color: white;
+      font-size: 20px;
+      padding-top: 10px;
+      transition: .7s ease-in-out;
+    }
+
+    #Aboutme .span4 {
+      color: white;
+      font-size: 20px;
+      padding-top: 10px;
+      transition: .7s ease-in-out;
+    }
+
+    #Aboutme .span5 {
+      color: white;
+      font-size: 20px;
+      padding-top: 10px;
+      transition: .7s ease-in-out;
+    }
+
+    #Aboutme .span1:hover {
+      color: white;
+      font-size: 25px;
+      padding-top: 10px;
+      transition: .3s ease-in-out;
+    }
+
+    #Aboutme .span2:hover {
+      color: white;
+      font-size: 25px;
+      padding-top: 10px;
+      transition: .3s ease-in-out;
+    }
+
+    #Aboutme .span3:hover {
+      color: white;
+      font-size: 25px;
+      padding-top: 10px;
+      transition: .3s ease-in-out;
+    }
+
+    #Aboutme .span4:hover {
+      color: white;
+      font-size: 25px;
+      padding-top: 10px;
+      transition: .3s ease-in-out;
+    }
+
+    #Aboutme .span5:hover {
+      color: white;
+      font-size: 25px;
+      padding-top: 10px;
+      transition: .3s ease-in-out;
+    }
+
+    #Skills {
+      font-size: larger;
+    }
+
+    #Skills .container {
+      padding-top: 50px;
+    }
+
+    #Work {
+      padding-top: 80px;
+    }
+
+    #Work .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      text-align: center;
+      line-height: 200px;
+    }
+    #Contact .content{
+      font-size: larger;
+      line-height: 60px;
+    }
+    a{
       color: white;
     }
-    ::-webkit-scrollbar{
-      width: ;
+    a:hover{
+      text-shadow:
+        0px 0px 15px rgba(39, 32, 238, 0.96),
+        0px 0px 25px rgba(251, 78, 20, 0.932),
+        0px 0px 35px rgba(149, 28, 242, 0.959),
+        0px 0px 45px rgba(148, 5, 148, 0.959),
+        0px 0px 55px rgba(228, 48, 204, 0.959),
+        0px 0px 65px rgba(238, 46, 213, 0.959);
+        }
+        marquee{
+          text-shadow:
+      0px 0px 15px rgba(245, 155, 38, 0.96),
+      0px 0px 25px rgba(238, 123, 23, 0.932),
+      0px 0px 35px rgba(228, 116, 10, 0.959),
+      0px 0px 45px rgba(246, 76, 45, 0.959),
+      0px 0px 55px rgba(229, 92, 34, 0.959),
+      0px 0px 65px rgba(234, 91, 20, 0.959);
+        }
+        marquee:hover{
+          text-shadow:
+        0px 0px 15px rgba(238, 224, 32, 0.96),
+        0px 0px 25px rgba(61, 236, 21, 0.932),
+        0px 0px 35px rgba(4, 55, 207, 0.959),
+        0px 0px 45px rgba(186, 16, 16, 0.959),
+        0px 0px 55px rgba(58, 214, 238, 0.959),
+        0px 0px 65px rgba(242, 242, 28, 0.959);
+
     }
+        
 
-  
-    #Start{
-      background-image: url("https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 870w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 1170w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 1470w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 1740w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 1770w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2070w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2340w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2370w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2670w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2940w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2970w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 3270w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 3540w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 3570w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 3870w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=4140&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 4140w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=4170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 4170w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=4470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 4470w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=4740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 4740w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=4770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 4770w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=5070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 5070w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=5340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 5340w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=5370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 5370w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=5670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 5670w, https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=5848&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 5848w");
-      background-size: cover;
-      background-blend-mode: overlay;
 
-    }
-    #Aboutme{
-      background-size: cover;
-      background-blend-mode: overlay;
-      -webkit-text-stroke: 0.3px #000000;
-      background-image: url("https://images.unsplash.com/photo-1475070929565-c985b496cb9f?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-    }
-    #Skills{
-      background-size: ;
-      background-blend-mode: overlay;
-      
-      background-image: url("https://images.unsplash.com/photo-1431440869543-efaf3388c585?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-    }
-    #Contact{
-      background-image: url("https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 870w, https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 1170w, https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 1470w, https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 1740w, https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 1770w, https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2070w, https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2340w, https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2370w, https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2670w, https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2940w, https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 2970w, https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 3270w, https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 3540w, https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 3570w, https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 3870w, https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=4140&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 4140w, https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=4170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 4170w, https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=4470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 4470w, https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=4740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 4740w, https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=4770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 4770w, https://images.unsplash.com/photo-1707343843344-011332037abb?q=80&w=5000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D 5000w");
-      background-size: cover;
-      background-blend-mode: overlay;
-    }
-    #Work{
-      background-image: url("https://images.unsplash.com/photo-1572177812156-58036aae439c?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-      background-size:cover;
-      background-blend-mode: overlay;
-    }
+    @media (max-width: 575px) {}
 
-    @media (max-width: 575px) {
-      html {
-        scroll-behavior: smooth;
-        scroll-padding-top: 100px;
-      }
+    @media (min-width: 575px) {}
 
-      .h3 {
-        font-size: 1.1rem;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-      }
-
-      .h4 {
-        font-size: 1.3rem;
-      }
-
-      b {
-        font-size: 1.1rem;
-      }
-    }
-
-    @media (min-width: 575px) {
-      .h3 {
-        font-size: 1.5rem;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-      }
-
-      .h4 {
-        font-size: 1.3rem;
-      }
-
-      b {
-        font-size: 1.3rem;
-      }
-    }
-
-    @media (min-width: 1050px) {
-      .h3 {
-        font-size: 1.7rem;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        line-height: 160%;
-
-      }
-
-      .h4 {
-        font-size: 1.5rem;
-      }
-
-      b {
-        font-size: 1.5rem;
-      
-      }
-    }
+    @media (min-width: 1050px) {}
   </style>
 
 </head>
 
 
-<body class=""id="body">
-  <div class=" fw-bold text-center text-white bg-dark h3 py-2" style="">Websites that convert, experiences that delight. </div>
+<body class="" id="body">
+
+  <div class=" fw-bold text-center h3 py-2 rounded-2"
+    style="  background-image: linear-gradient(to right bottom, #ff094e, #1e07e8,#2685f1, #f10fa2); font-family: 'Arial Narrow', Arial, sans-serif;  color: #ffe414;">
+    Websites that convert, experiences that
+    delight.
+  </div>
   <header class="sticky-top">
     <nav class=" sticky-top">
-      <div id="navbar" class="navbar border-bottom border-secondary rounded-bottom-5 navbar-expand-md"
-        style="background-color: rgba(0, 0, 0, 0.3); backdrop-filter: blur(10px);">
-        <div class="ms-md-5 ms-3 h4  navbar-brand text-white fw-bold" style="">FrontEnd developer</div>
-        <button class="navbar-toggler btn  border-white me-md-5 me-2" data-bs-toggle="collapse"
+      <div id="navbar" class="navbar  rounded-bottom-5 navbar-expand-md"
+        style="background-color: rgba(0, 0, 0, 0.3); backdrop-filter: blur(10px);  border-bottom:2px solid #F57D1F;">
+        <div class="ms-md-5 ms-3 h4  navbar-brand  fw-bold" style="color: #F57D1F;  text-shadow:  
+        0px 0px 10px rgba(243, 131, 46, 0.96),
+        0px 0px 20px rgba(246, 171, 100, 0.932),
+        0px 0px 30px rgba(240, 165, 43, 0.959);">FrontEnd developer</div>
+        <button class="navbar-toggler btn me-md-5 me-3" style="border:1px solid #F57D1F;" data-bs-toggle="collapse"
           data-bs-target=".collapse" aria-controls="collapse" aria-expanded="false">
-          <span class="navbar-toggler-ico "><i class="fa-solid fa-bars fa-md text-white"></i></span>
+          <span class="navbar-toggler-ico"><i class="fa-solid fa-bars fa-md" style="color:white;"></i></span>
         </button>
         <div class="collapse navbar-collapse me-md-5 ">
           <ul class="navbar-nav d-flex flex-row  justify-content-around ms-auto mt-md-0 ">
             <li class="nav-item  px-lg-5 px-md-4 ">
-              <a class="nav-link" href="#Aboutme"><span class="btn btn-outline-light btn-sm "> About me</span></a>
+              <a class="nav-link" href="#Aboutme"><span class="btn btn-outline-light btn-sm"
+                  style="border:1px solid #F57D1F;"> About me</span></a>
             </li>
             <li class="nav-item px-lg-5 px-md-4 ">
-              <a class="nav-link" href="#Skills"><span class="btn btn-outline-light btn-sm"> Skills</span></a>
+              <a class="nav-link" href="#Skills"><span class="btn btn-outline-light btn-sm"
+                  style="border:1px solid #F57D1F;"> Skills</span></a>
             </li>
             <li class="nav-item px-lg-5 px-md-4 ">
-              <a class="nav-link" href="#Work"><span class="btn btn-outline-light btn-sm"> Work</span></a>
+              <a class="nav-link" href="#Work"><span class="btn btn-outline-light btn-sm"
+                  style="border:1px solid #F57D1F;"> Work</span></a>
             </li>
             <li class="nav-item px-lg-5 px-md-4">
-              <a class="nav-link" href="#Contact"><span class="btn btn-outline-light btn-sm"> Contact</span></a>
+              <a class="nav-link" href="#Contact"><span class="btn btn-outline-light btn-sm"
+                  style="border:1px solid #F57D1F;"> Contact</span></a>
             </li>
           </ul>
         </div>
       </div>
 
     </nav>
-
   </header>
 
   <main class="d-flex flex-column">
-    <div id="Start" class=" bg-dark text-white " style="position: relative; height: fit-content; ">
-      <div class="container font-monospace fst-italic">
+    <div id="Start" class="">
+      <div class="intro text-white" style="">
+        <span class="">Aspiring B.Tech Student</span><br><br>
+        <span class=""> Seeking Dynamic Internship & Part-Time Roles </span><br><br>
+        <span class=""> Ready to Learn and Contribute</span><br><br>
+        <span class="" style="" width=""> As a <span class="role" style="">FrontEnd Developer. . . .
+          </span>
 
-        <span class="h3" style="">
-          <p class="col text-start ">I turn pixels into experiences. I don't just code, I craft <br>digital journeys
-            that
-            engage and
-            inspire.</p>
-          <p class="text-end ">The web is my playground. Let's push boundaries, defy expectations,<br> and build
-            something
-            truly remarkable.</p>
-
-          <p class="text-start ">Passionate, meticulous, and always learning.<br> I'm the developer who takes your
-            vision
-            to the next
-            level.</p><br>
-        </span>
-
-        <span class="h3">
-          <p class="text-end">I may code with caffeine and fueled by puns.But don't worry,<br> your website will be
-            bug-free (and
-            pun-free, if you insist).</p> <br>
-          <p class="text-start ">Frontend development isn't rocket science, but it's close.<br> My skills are out of
-            this
-            world, especially when
-            it
-            comes to clean code and intuitive design.</p><br>
-          <p class="text-end">The web isn't just static pages, it's a living, breathing masterpiece.<br>And I'm the
-            artist
-            who
-            paints it with
-            code.</p>
-        </span>
+      </div>
+      <div>
+        <img src="for github projrcts/deepak.jpg" class="" style="border-radius: 31% 69% 23% 77% / 66% 18% 82% 34%; border: 1px solid #43e443;
+      box-shadow: 0px 0px 50px 0px rgba(34, 245, 48, 0.911),
+    0px 2px 4px rgba(248, 19, 19, 0.933),
+    0px 4px 8px rgba(84, 255, 49, 0.919),
+    0px 8px 16px rgba(255, 23, 23, 0.946);
+" alt="#">
       </div>
     </div>
-    <div id="Aboutme" class="text-break lh-lg text-center fs-3 bg-dark text-white" style="  ">
-      <div class="container ">
-        <small class=" font-monospace h4 fw-bold">**Hi there! **</small>
-        <span class=" font-monospace fst-italic d-flex flex-wrap">
-          <span class="h3">I'm <small class="h4 text-warning  fw-bold">Deepakkumar</small>, a second year at <small
-              class=" fw-bolder h3">Nandha Engineering College(Autonomous)</small> with a fire in my heart for building
+    <div id="Aboutme" class="" style="">
+      <div class="container pt-4 text-center">
+        <span class="span1 fs-2 fw-bold " style="color: #F57D1F;">**Hi there! **</span><br>
+        <span class=" lh-lg d-flex flex-column  justify-content-center align-items-center">
+          <span class="span2">I'm <small class="h4 text-warning fw-bold">Deepakkumar</small>, a third year at <small
+              class=" fw-bolder h3 text-secondary">Nandha Engineering College(Autonomous)</small> with a fire in my
+            heart for building
             user-friendly
             and impactful web experiences.</span><br>
 
-          <span class="h3"> I'm drawn to clean, minimalist designs where every element has a purpose. I'm currently
+          <span class="span3"> I'm drawn to clean, minimalist designs where every element has a purpose. I'm currently
             diving deep
             into
             HTML, CSS, JavaScript, and React, eager to turn my learnings into elegant solutions for real-world
             challenges.</span><br>
 
-          <span class="h3"> This portfolio showcases some of my best work. Take a peek to see what I'm capable
+          <span class="span4"> This portfolio showcases some of my best work. Take a peek to see what I'm capable
             of!</span><br>
 
-          <span class="h3">I'm actively seeking internship opportunities to learn from experienced professionals and
+          <span class="span5">I'm actively seeking internship opportunities to learn from experienced professionals and
             contribute my
             skills. If you're looking for a passionate and quick learner with a strong foundation in web development,
             let's connect!</span>
         </span>
-      </div>    </div>
+      </div>
+    </div>
 
-    <div id="Skills" class="h3  fst-italic font-monospace bg-dark text-white"
-      style="position: relative; height:100vh; overflow-y: scroll;">
-      <div class="container">
+    <div id="Skills" class=" font-monospace  text-white" style="position: relative; height:100vh; overflow-y: scroll;">
+      <div class="container ">
+        <div class="text-center fw-bold fs-2 pt-3"
+          style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: #F57D1F;">Languages
+        </div>
 
 
         <div class="container skill1 w-75 rounded-3 d-flex flex-column mt-4 gap-4"
-          style="height: fit-content; background-color: rgba(75, 74, 74, 0.3);"> <b class="text-center">Front-End            Languages</b>
+          style="height: fit-content; background-color: rgba(75, 74, 74, 0.3);"> <b class="text-center">Front-End
+            Languages</b>
           <abbr title="HTML - Hypertext Markup Language">
             <div class="d-flex align-items-center gap-2 w-100">
               <div class=""> <img
@@ -269,7 +360,8 @@
               <div><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" width="30" alt="">
               </div>
               <div class="progress bg-secondary w-100" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
-                <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated w-50"><b>50%</b></div>
+                <div class="progress-bar  progress-bar-striped progress-bar-animated"
+                  style="width: 90%; background-color: #2a9f03;"><b>90%</b></div>
               </div>
             </div>
           </abbr>
@@ -417,57 +509,36 @@
         </div>
       </div>
     </div>
-    <div id="Work"   class="text-white bg-dark " style=" height: fit-content;">
+    <div id="Work" class="text-white  " style=" height: fit-content;">
+      <div class="text-center fw-bolder fs-2"
+        style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color: #F57D1F;">
+        Projects</div>
+
       <div class="container">
-        <b>Interactive Data Visualization:</b>
-        <li>Stock market dashboard
-        <li>Real-time weather map
-        <li>Interactive music visualization
-        <li>Animated charts & graphs<br>
-
-          <b>Complex User Interfaces:</b>
-        <li>Drag-and-drop file manager
-        <li>Collaborative drawing app
-        <li>Kanban board with advanced features
-        <li>Mind mapping tool<br>
-
-          <b>Web Applications with Functionality:</b>
-        <li>E-commerce store with user accounts
-        <li>Booking management system
-        <li>Task management app with integrations
-        <li>Social media platform with specific features<br>
-
-          <b>Real-Time and Multiplayer Experiences:</b>
-        <li>Multiplayer trivia game
-        <li>Drawing game with live collaboration
-        <li>Chat application with user presence
-        <li>Interactive whiteboard with real-time updates<br>
-
-          <b>Advanced Design and Animation:</b>
-        <li>Single-page application with smooth transitions
-        <li>3D object modeling and animation in the browser
-        <li>Parallax scrolling effects with depth and immersion
-        <li>Interactive storytelling website with unique visuals
+        <div>Project ChronoSync</div>
+        <div>Portofolio</div>
+        <div>YouTube Clone</div>
       </div>
     </div>
 
-    <div id="Contact" class="bg-dark text-white " style="position: relative; height: fit-content;">
+    <div id="Contact" class="text-white " style="position: relative; height: fit-content;">
       <div class="container">
-        <div class="calltoaction  d-flex flex-wrap justify-content-evenly gap-3">
-          <div class="text-center h3 fst-italic fw-bolder">"Let's build something incredible together."</div>
-          <div class="text-center h3 fst-italic fw-bolder "> "Looking for a developer for your e-commerce store? Let's
+        <div class="text-center fw-bold fs-2" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color: #F57D1F;">Contact</div>
+        <div class="content gap-3">
+          <div class="text-center">"Let's build something incredible together."</div>
+          <div class="text-center "> "Looking for a developer for your e-commerce store? Let's
             talk!"</div>
-          <div class="text-center h3 fst-italic fw-bolder "> "Need help with front-end development? I'm your guy."</div>
-          <div class="text-center h3 fst-italic fw-bolder ">"I'm open to freelance projects for startups and growing
+          <div class="text-center "> "Need help with front-end development? I'm your guy."</div>
+          <div class="text-center ">"I'm open to freelance projects for startups and growing
             businesses."
           </div>
         </div>
         <div class=" d-flex justify-content-center align-items-center gap-2 ">
           <i class="fa-regular fa-envelope display-3"></i>
           <a class=" text-decoration-none d-flex align-items-center " href="#d"><span
-              class="h3">dktopg2@gmail.com</span></a>
+              class="fs-2 fw-bold">dktopg2@gmail.com</span></a>
         </div>
-        <h3 class="text-center h3 pt- fw-bolder"> For more information<br><small>91-9025454148</small></h3>
+        <h3 class="text-center"> For more information<br><small>91-9025454148</small></h3>
         <br>
 
         <div class="container mt-3 d-flex justify-content-around ">
@@ -477,11 +548,12 @@
           <a href="#d"><i class="fa-brands fa-github display-3"></a></i>
         </div>
       </div><br>
-      <marquee behavior="" direction="" class="h3 fst-italic fw-bolder text-white">I'm actively seeking internship
-        opportunities to learn from experienced professionals and contribute my skills. If you're looking for a passionate
+      <marquee behavior="" direction="" class="h3 fst-italic fw-bolder text-white ">I'm actively seeking internship
+        opportunities to learn from experienced professionals and contribute my skills. If you're looking for a
+        passionate
         and quick learner with a strong foundation in web development, let's connect!</marquee>
-    </main>
-    </div>
+  </main>
+  </div>
 
 
 
